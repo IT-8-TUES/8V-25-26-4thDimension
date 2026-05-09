@@ -1,7 +1,3 @@
-// script.js
-
-// ADD TO CART
-
 const buttons = document.querySelectorAll(".cart-btn");
 
 buttons.forEach(button => {
@@ -13,8 +9,6 @@ buttons.forEach(button => {
     });
 
 });
-
-// SEARCH
 
 const searchInput = document.getElementById("searchInput");
 
@@ -44,8 +38,6 @@ searchInput.addEventListener("keyup", () => {
     });
 
 });
-
-// CATEGORY FILTER
 
 const categoryButtons = document.querySelectorAll(".category-btn");
 
