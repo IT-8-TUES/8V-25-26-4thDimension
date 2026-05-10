@@ -269,3 +269,19 @@ body{
     color: #aaa;
     font-size: 14px;
 }
+
+.size-select{
+    width: calc(100% - 30px);
+    margin: 8px 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background-color: white;
+}
+
+.size-select:focus{
+    outline: none;
+    border-color: #b08968;
+}
