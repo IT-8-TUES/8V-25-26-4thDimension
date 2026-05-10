@@ -555,3 +555,117 @@ transition: 0.3s;
         border-color: #b08968;
     }
 
+    /*modal popup window*/
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes modalIn {
+    from { opacity: 0; transform: scale(0.9) translateY(20px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.modal-close:hover {
+    background: #f0ebe6;
+}
+
+.modal-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.modal-body h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.modal-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #b08968;
+    margin-bottom: 16px;
+}
+
+.modal-detail {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* make product images clickable */
+.product-card img {
+    cursor: pointer;
+}
+
+.product-card h3 {
+    cursor: pointer;
+}
+
+.product-card h3:hover {
+    color: #b08968;
+}
+
+@media(max-width: 600px) {
+    .modal {
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .modal-img {
+        height: 250px;
+        border-radius: 12px 12px 0 0;
+    }
+}

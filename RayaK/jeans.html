@@ -53,7 +53,9 @@
 
 <section class="products">
 
-    <div class="product-card women">
+    <div class="product-card women"
+        data-description="Дамски дънки Baggy"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\women\baggy_jeans_women.webp" alt="Дамски дънки Baggy" loading="lazy">
         <h3>Дамски дънки Baggy</h3>
         <p class="price">79.99 €</p>
@@ -67,7 +69,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card women">
+    <div class="product-card women"
+        data-description="Дамски дънки Baggy high waist"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\women\baggy_high_waisted.webp" alt="Дамски дънки Baggy high waist" loading="lazy">
         <h3>Дамски дънки Baggy high waist</h3>
         <p class="price">69.99 €</p>
@@ -81,7 +85,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card women">
+    <div class="product-card women"
+        data-description="Дамски дънки Low rise"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\women\low_rise_women003.jpg" alt="Дамски дънки Low rise" loading="lazy">
         <h3>Дамски дънки Low rise</h3>
         <p class="price">59.99 €</p>
@@ -95,7 +101,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-     <div class="product-card women">
+     <div class="product-card women"
+        data-description="Дамски дънки Skinny fit"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\women\skinny.webp" alt="Дамски дънки Skinny fit" loading="lazy">
         <h3>Дамски дънки Skinny fit</h3>
         <p class="price">48.99 €</p>
@@ -109,7 +117,9 @@
         <button class="cart-btn">Добави</button>
     </div>
     
-    <div class="product-card women">
+    <div class="product-card women"
+        data-description="Дамски дънки Very baggy"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\women\very_baggy_jeans_women.jpg" alt="Дамски дънки Very baggy" loading="lazy">
         <h3>Дамски дънки Very baggy</h3>
         <p class="price">65.99 €</p>
@@ -123,7 +133,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card women">
+    <div class="product-card women"
+        data-description="Дамски дънки Wide leg"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\women\wide_leg_jeans_women004.jpg" alt="Дамски дънки Wide leg" loading="lazy">
         <h3>Дамски дънки Wide leg</h3>
         <p class="price">50.99 €</p>
@@ -137,7 +149,9 @@
         <button class="cart-btn">Добави</button>
     </div>
     
-     <div class="product-card men">
+     <div class="product-card men"
+        data-description="Мъжки дънки Baggy dark"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\men\baggy_dark.webp" alt="Мъжки дънки Baggy dark" loading="lazy">
         <h3>Мъжки дънки Barry dark</h3>
         <p class="price">55.99 €</p>
@@ -151,7 +165,9 @@
         <button class="cart-btn">Добави</button>
     </div>
     
-     <div class="product-card men">
+     <div class="product-card men"
+        data-description="Мъжки дънки Baggy light"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\men\baggy.jpg" alt="Мъжки дънки Baggy light" loading="lazy">
         <h3>Мъжки дънки Barry light</h3>
         <p class="price">60.99 €</p>
@@ -165,7 +181,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-     <div class="product-card men">
+     <div class="product-card men"
+        data-description="Мъжки дънки Slim fit"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\men\slim.jpg" alt="Мъжки дънки Slim fit" loading="lazy">
         <h3>Мъжки дънки Slim fit</h3>
         <p class="price">45.99 €</p>
@@ -179,7 +197,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card men">
+    <div class="product-card men"
+        data-description="Мъжки дънки Relaxed Fit Straight leg"
+        data-material="Деним, 95% памук, 5% еластан">
         <img src="resources\jeans\men\relaxed_fit_straight.webp" alt="Мъжки дънки Relaxed Fit Straight leg" loading="lazy">
         <h3>Мъжки дънки Relaxed Fit Straight leg</h3>
         <p class="price">60.99 €</p>
@@ -197,6 +217,21 @@
     <div class="no-results" id="noResults">Няма намерени продукти 😕</div>
 
 </section>
+
+<!-- for popup product details-->
+<div class="modal-overlay" id="productModal">
+    <div class="modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <img class="modal-img" id="modalImg" src="" alt="">
+        <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            <p class="modal-price" id="modalPrice"></p>
+            <p class="modal-detail" id="modalDescription"></p>
+            <p class="modal-detail" id="modalMaterial"></p>
+        </div>
+    </div>
+</div>
+
 
 <footer class="footer">
     <div class="footer-content">

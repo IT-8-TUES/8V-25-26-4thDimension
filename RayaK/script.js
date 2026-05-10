@@ -108,6 +108,7 @@ document.querySelectorAll(".product-card img").forEach(img => {
     img.setAttribute("loading", "lazy");
 });
 
+// mobile view hamburger menu
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -123,5 +124,61 @@ if (hamburger) {
             hamburger.classList.remove("active");
             navLinks.classList.remove("open");
         });
+    });
+}
+
+// product details modal popup window
+const modal = document.getElementById("productModal");
+const modalClose = document.getElementById("modalClose");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalPrice = document.getElementById("modalPrice");
+const modalDescription = document.getElementById("modalDescription");
+const modalMaterial = document.getElementById("modalMaterial");
+
+if (modal) {
+
+    // Open modal when clicking on image or title
+    productCards.forEach(card => {
+        const img = card.querySelector("img");
+        const title = card.querySelector("h3");
+
+        function openModal() {
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalTitle.textContent = title.textContent;
+            modalPrice.textContent = card.querySelector(".price").textContent;
+
+            // Read data attributes
+            const desc = card.dataset.description;
+            const mat = card.dataset.material;
+
+            modalDescription.textContent = desc || "";
+            modalMaterial.textContent = mat ? "Материал: " + mat : "";
+
+            modal.classList.add("open");
+            document.body.style.overflow = "hidden";
+        }
+
+        img.addEventListener("click", openModal);
+        title.addEventListener("click", openModal);
+    });
+
+    // Close modal
+    function closeModal() {
+        modal.classList.remove("open");
+        document.body.style.overflow = "";
+    }
+
+    modalClose.addEventListener("click", closeModal);
+
+    // Close on clicking overlay (outside modal)
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
     });
 }

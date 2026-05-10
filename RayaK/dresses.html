@@ -53,7 +53,9 @@
 
 <section class="products">
 
-    <div class="product-card elegant">
+    <div class="product-card elegant"
+        data-description="Елегантна дълга рокля в изумрудено зелено с открит гръб. Перфектна за официално събитие."
+        data-material="Сатен, 95% полиестер, 5% еластан">
         <img src="resources\dresses\elegant_evening dress.webp" alt="Зелена елегантна рокля с гол гръб" loading="lazy">
         <h3>Зелена елегантна рокля с гол гръб</h3>
         <p class="price">150.99 €</p>
@@ -67,7 +69,9 @@
 		<button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card elegant">
+    <div class="product-card elegant"
+        data-description="Червена миди рокля с класическа кройка. Подходяща за официални вечери."
+         data-material="100% полиестер">
         <img src="resources\dresses\elegant_red_midi.webp" alt="Червена официална рокля" loading="lazy">
         <h3>Червена официална рокля</h3>
         <p class="price">110.99 €</p>
@@ -81,7 +85,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card everyday">
+    <div class="product-card everyday"
+        data-description="Розова ежедневна рокля с цепка отстрани. Лека и удобна за топлите дни."
+         data-material="100% органичен памук">
         <img src="resources\dresses\everyday_pink.webp" alt="Розова ежедневна рокля с цепка" loading="lazy">
         <h3>Розова ежедневна рокля с цепка</h3>
         <p class="price">90.99 €</p>
@@ -95,7 +101,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card everyday">
+    <div class="product-card everyday"
+        data-description="Дълга ежедневна рокля в синьо на райета. Свободна кройка, перфектна за лятото."
+        data-material="55% лен, 45% памук">
         <img src="resources\dresses\long_everyday.webp" alt="Дълга синя ежедневна рокля" loading="lazy">
         <h3>Дълга синя ежедневна рокля</h3>
         <p class="price">70.99 €</p>
@@ -109,7 +117,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card elegant">
+    <div class="product-card elegant"
+            data-description="Къса елегантна рокля с декоративна панделка на гърба."
+         data-material="Шифон, 100% полиестер">
         <img src="resources\dresses\short_elegant.jpg" alt="Къса елегантна рокля с панделка" loading="lazy">
         <h3>Къса елегантна рокля с панделка</h3>
         <p class="price">102.99 €</p>
@@ -123,7 +133,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card elegant">
+    <div class="product-card elegant"
+        data-description="Минималистична къса бяла рокля. Класическа елегантност за всеки повод."
+        data-material="97% полиестер, 3% еластан">
         <img src="resources\dresses\elegant_short.jpg" alt="Къса бяла елегантна рокля" loading="lazy">
         <h3>Къса бяла елегантна рокля</h3>
         <p class="price">90.99 €</p>
@@ -137,7 +149,9 @@
         <button class="cart-btn">Добави</button>
     </div>
 
-    <div class="product-card everyday">
+    <div class="product-card everyday"
+        data-description="Къса ежедневна рокля с флорален мотив. Весела и цветна за разходки."
+        data-material="100% вискоза">
         <img src="resources\dresses\short_everyday.webp" alt="Къса ежедневна рокля на цветя" loading="lazy">
         <h3>Къса ежедневна рокля на цветя</h3>
         <p class="price">69.99 €</p>
@@ -154,6 +168,20 @@
     <div class="no-results" id="noResults">Няма намерени продукти 😕</div>
 
 </section>
+
+<!-- for popup product details-->
+<div class="modal-overlay" id="productModal">
+    <div class="modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <img class="modal-img" id="modalImg" src="" alt="">
+        <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            <p class="modal-price" id="modalPrice"></p>
+            <p class="modal-detail" id="modalDescription"></p>
+            <p class="modal-detail" id="modalMaterial"></p>
+        </div>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-content">
