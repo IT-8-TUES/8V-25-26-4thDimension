@@ -1,3 +1,4 @@
+//made by Raya Krasimiriova Kirilova
 // Cart counter
 let cartCount = 0;
 const cartCountEl = document.getElementById("cartCount");
@@ -36,7 +37,7 @@ searchInput.addEventListener("keyup", () => {
         const productName = card.querySelector("h3").textContent.toLowerCase();
 
         if (productName.includes(searchValue)) {
-            card.style.display = "block";
+            card.style.display = "flex";
             visibleCount++;
         } else {
             card.style.display = "none";
@@ -45,7 +46,7 @@ searchInput.addEventListener("keyup", () => {
 
     // show/hide no results message
     if (noResults) {
-        noResults.style.display = visibleCount === 0 ? "block" : "none";
+        noResults.style.display = visibleCount === 0 ? "flex" : "none";
     }
 });
 
@@ -66,7 +67,7 @@ categoryButtons.forEach(button => {
 
         productCards.forEach(card => {
             if (category === "all" || card.classList.contains(category)) {
-                card.style.display = "block";
+                card.style.display = "flex";
                 visibleCount++;
             } else {
                 card.style.display = "none";
@@ -74,7 +75,7 @@ categoryButtons.forEach(button => {
         });
 
         if (noResults) {
-            noResults.style.display = visibleCount === 0 ? "block" : "none";
+            noResults.style.display = visibleCount === 0 ? "flex" : "none";
         }
 
         // clear search when switching category
@@ -106,3 +107,21 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 document.querySelectorAll(".product-card img").forEach(img => {
     img.setAttribute("loading", "lazy");
 });
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamburger) {
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("open");
+    });
+
+    // close menu when a link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navLinks.classList.remove("open");
+        });
+    });
+}

@@ -1,3 +1,4 @@
+/* made by Raya Krasimiriova Kirilova */
 
 *{
     margin: 0;
@@ -218,6 +219,9 @@ body{
     transition: transform 0.3s, box-shadow 0.3s;
 
     animation: cardFadeIn 0.5s ease backwards;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .product-card:hover{
@@ -241,6 +245,7 @@ body{
 .product-card h3{
     padding: 15px;
     font-size: 20px;
+    flex-grow: 1;
 }
 
 .price{
@@ -425,6 +430,39 @@ transition: 0.3s;
     pointer-events: auto;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 5px;
+    z-index: 60;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: #b08968;
+    border-radius: 3px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
 /* RESPONSIVE */
 
 @media(max-width: 1200px){
@@ -450,13 +488,49 @@ transition: 0.3s;
         padding: 20px;
     }
 
+    .hamburger {
+        display: flex;
+    }
+
     .navbar{
-        flex-direction: column;
-        gap: 15px;
+        flex-wrap: wrap;
         padding: 15px 20px;
     }
 
-    .hero-text h2 {
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background-color: white;
+        border-top: 1px solid #eee;
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a,
+    .nav-links .cart-icon {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid #f0ebe6;
+        justify-content: center;
+    }
+
+    .nav-links li:last-child a,
+    .nav-links li:last-child .cart-icon {
+        border-bottom: none;
+    }
+
+    .headingTxt-text h2{
         font-size: 30px;
     }
 
@@ -464,3 +538,20 @@ transition: 0.3s;
         width: 260px;
     }
 }
+
+#sizes{
+    width: calc(100% - 30px);
+    margin: 8px 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background-color: white;
+    }   
+
+#sizes:focus{
+        outline: none;
+        border-color: #b08968;
+    }
+
