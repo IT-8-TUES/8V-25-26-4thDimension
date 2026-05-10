@@ -1,0 +1,121 @@
+<!--made by Raya Krasimiriova Kirilova-->
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modea - Рокли</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">
+            <a href="..\index.html">
+                <img src="..\resources\logo.png" alt="Modea">
+            </a>
+        </h1>
+        <ul class="nav-links">
+            <li><a href="..\ИТ проект\hoodies.html">Суичъри</a></li>
+            <li><a href="..\ИТ проект\tshirts.html">Тениски</a></li>
+            <li><a href="jeans.html">Дънки</a></li>
+            <li><a href="dresses.html">Рокли</a></li>
+            <li><span class="cart-icon">🛒 <span id="cartCount">0</span></span></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="headingTxt">
+    <div class="headingTxt-text">
+        <h2>Колекция рокли</h2>
+        <p>Ежедневни и официални рокли</p>
+    </div>
+</section>
+
+<section class="search-section">
+    <input type="text" id="searchInput" placeholder="Търси рокли...">
+</section>
+
+<section class="categories">
+    <button class="category-btn" data-category="all">Всички</button>
+    <button class="category-btn" data-category="elegant">Официални</button>
+    <button class="category-btn" data-category="everyday">Ежедневни</button>
+   
+</section>
+
+<section class="products">
+
+    <div class="product-card elegant">
+        <img src="resources\dresses\elegant_evening dress.webp" alt="Зелена елегантна рокля с гол гръб" loading="lazy">
+        <h3>Зелена елегантна рокля с гол гръб</h3>
+        <p class="price">150.99 €</p>
+        <button class="cart-btn">Добави</button>
+    </div>
+
+    <div class="product-card elegant">
+        <img src="resources\dresses\elegant_red_midi.webp" alt="Червена официална рокля" loading="lazy">
+        <h3>Червена официална рокля</h3>
+        <p class="price">110.99 €</p>
+        <button class="cart-btn">Добави</button>
+    </div>
+
+    <div class="product-card everyday">
+        <img src="resources\dresses\everyday_pink.webp" alt="Розова ежедневна рокля с цепка" loading="lazy">
+        <h3>Розова ежедневна рокля с цепка</h3>
+        <p class="price">90.99 €</p>
+        <button class="cart-btn">Добави</button>
+    </div>
+
+    <div class="product-card everyday">
+        <img src="resources\dresses\long_everyday.webp" alt="Дълга синя ежедневна рокля" loading="lazy">
+        <h3>Дълга синя ежедневна рокля</h3>
+        <p class="price">70.99 €</p>
+        <button class="cart-btn">Добави</button>
+    </div>
+
+    <div class="product-card elegant">
+        <img src="resources\dresses\short_elegant.jpg" alt="Къса елегантна рокля с панделка" loading="lazy">
+        <h3>Къса елегантна рокля с панделка</h3>
+        <p class="price">102.99 €</p>
+        <button class="cart-btn">Добави</button>
+    </div>
+
+    <div class="product-card elegant">
+        <img src="resources\dresses\elegant_short.jpg" alt="Къса бяла елегантна рокля" loading="lazy">
+        <h3>Къса бяла елегантна рокля</h3>
+        <p class="price">90.99 €</p>
+        <button class="cart-btn">Добави</button>
+    </div>
+
+    <div class="product-card everyday">
+        <img src="resources\dresses\short_everyday.webp" alt="Къса ежедневна рокля на цветя" loading="lazy">
+        <h3>Къса ежедневна рокля на цветя</h3>
+        <p class="price">69.99 €</p>
+        <button class="cart-btn">Добави</button>
+    </div>
+
+    <div class="no-results" id="noResults">Няма намерени продукти 😕</div>
+
+</section>
+
+<footer class="footer">
+    <div class="footer-content">
+        <h2><a href="..\index.html">Modea</a></h2>
+        <p>Минималистична мода за всеки</p>
+        <p class="footer-links"><a href="https:instagram.com">Instagram - Modea_official</a></p>
+        <p class="footer-links"><a href="https:tiktok.com">TikTok - Modea_style</a></p>
+        <p class="footer-links">Phone number - 088******9</p>
+        <p class="copyright">© 2026 Modea. Всички права запазени.</p>
+    </div>
+</footer>
+
+<button id="scrollTop" class="scroll-top-btn">↑</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
