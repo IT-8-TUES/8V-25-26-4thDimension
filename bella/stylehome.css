@@ -1,0 +1,883 @@
+/* Основни настройки и цветове */
+:root {
+    --bg-cream: #F8F3EC;
+    --card-white: #FFFFFF;
+    --text-black: #1E1E1E;
+    --caramel-accent: #D8B98E;
+    --btn-pink: #D6B4B4;
+    --btn-pink-hover: #C49999;
+    --btn-caramel-hover: #C4A47D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f5f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- ХЕДЪР И НАВИГАЦИЯ --- */
+header {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between; /* Лого вляво, Навигация вдясно */
+    align-items: center;
+    padding: 10px 50px;
+    position: sticky; /* Залепва най-отгоре */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-img {
+    height: 60px; /* Малко по-балансиран размер */
+    width: auto;
+    mix-blend-mode: multiply;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 500;
+    font-size: 16px; /* По-модерен размер за навигация */
+    transition: color 0.3s ease;
+    text-transform: lowercase; /* Минималистичен стил */
+}
+
+nav a:hover {
+    color: var(--caramel-accent);
+}
+
+/* Стил за бутона на количката в навигацията */
+.cart-link {
+    background-color: var(--bg-cream);
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #eee;
+    font-weight: 600;
+}
+
+#cart-count {
+    color: var(--caramel-accent);
+}
+
+/* --- БАНЕР СЕКЦИЯ (HERO) --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-badge {
+    position: absolute;
+    bottom: 40px;
+    left: 5%;
+    background-color: var(--card-white);
+    padding: 20px 45px;
+    border-radius: 50px;
+    font-size: 32px;
+    font-weight: 800;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.top-products h2 {
+
+    text-align: center;
+
+    font-size: 46px;
+
+    margin-bottom: 50px;
+
+    font-weight: bold;
+
+}
+
+
+
+.products-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 0 20px;
+
+    margin-bottom: 80px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* Продуктови карти */
+
+.product-card {
+
+    background-color: var(--card-white);
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    width: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+
+    text-align: left;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+
+
+.product-img {
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.product-title {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    line-height: 1.3;
+
+    min-height: 46px;
+
+}
+
+
+
+.product-price {
+
+    font-size: 17px;
+
+    color: #555;
+
+    margin-bottom: 15px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* Падащо меню за размер */
+
+.size-select {
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    border: 1px solid #D3D3D3;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    color: #333333;
+
+    margin-bottom: 15px;
+
+    background-color: #FFFFFF;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    outline: none;
+
+}
+
+
+
+.size-select:hover {
+
+    border-color: #A9A9A9;
+
+}
+
+
+
+/* Бутони Добави */
+
+.add-btn {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+
+    margin-top: auto;
+
+}
+
+
+
+.btn-pink {
+
+    background-color: var(--btn-pink);
+
+}
+
+
+
+.btn-pink:hover {
+
+    background-color: var(--btn-pink-hover);
+
+}
+
+
+
+.btn-caramel {
+
+    background-color: var(--caramel-accent);
+
+}
+
+
+
+.btn-caramel:hover {
+
+    background-color: var(--btn-caramel-hover);
+
+}
+
+
+
+/* --- ФУТЪР --- */
+
+footer {
+
+    background-color: var(--card-white);
+
+    padding: 50px 20px;
+
+    margin-top: 60px;
+
+    /* Заобляме само горните ъгли, за да седи като "стъпил" на дъното */
+
+    border-top-left-radius: 50px;
+
+    border-top-right-radius: 50px;
+
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
+
+}
+
+
+
+.footer-content {
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px; /* Разстояние между отделните секции във футъра */
+
+}
+
+
+
+.footer-brand h2 {
+
+    color: var(--caramel-accent);
+
+    font-size: 38px;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.footer-brand p {
+
+    font-size: 18px;
+
+    color: #666;
+
+    font-style: italic;
+
+}
+
+
+
+.footer-socials p, .footer-contact p {
+
+    font-size: 18px;
+
+    color: var(--text-black);
+
+    margin: 8px 0;
+
+}
+
+
+
+.footer-socials strong {
+
+    color: var(--caramel-accent);
+
+}/* Основни настройки и цветове */
+
+:root {
+
+    --bg-cream: #F8F3EC;
+
+    --card-white: #FFFFFF;
+
+    --text-black: #1E1E1E;
+
+    --caramel-accent: #D8B98E;
+
+    --btn-pink: #D6B4B4;
+
+    --btn-pink-hover: #C49999;
+
+    --btn-caramel-hover: #C4A47D;
+
+}
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #f8f5f0;
+
+    color: #333;
+
+}
+
+
+
+/* --- ХЕДЪР И НАВИГАЦИЯ --- */
+
+header {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 20px 40px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+
+
+.logo-img {
+
+    height: 70px;
+
+    mix-blend-mode: multiply;
+
+}
+
+
+
+nav {
+
+    margin-left: 30px;
+
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+}
+
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: var(--text-black);
+
+    font-weight: bold;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+
+nav a:hover {
+
+    color: var(--caramel-accent);
+
+}
+
+
+
+.cart-link {
+
+    background-color: var(--card-white);
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
+}
+
+
+
+#cart-count {
+
+    color: var(--caramel-accent);
+
+}
+
+
+
+/* --- БАНЕР СЕКЦИЯ (HERO) --- */
+
+.hero-section {
+
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 60px;
+
+}
+
+
+
+.hero-bg {
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+
+.hero-badge {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 10%;
+
+    background-color: var(--card-white);
+
+    padding: 15px 40px;
+
+    border-radius: 40px;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+}
+
+
+
+/* --- ТОП ПРОДУКТИ --- */
+
+.top-products h2 {
+
+    text-align: center;
+
+    font-size: 46px;
+
+    margin-bottom: 50px;
+
+    font-weight: bold;
+
+}
+
+
+
+.products-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    padding: 0 20px;
+
+    margin-bottom: 80px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+/* Продуктови карти */
+
+.product-card {
+
+    background-color: var(--card-white);
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    width: 320px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+
+    text-align: left;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+
+
+.product-img {
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.product-title {
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    line-height: 1.3;
+
+    min-height: 46px;
+
+}
+
+
+
+.product-price {
+
+    font-size: 17px;
+
+    color: #555;
+
+    margin-bottom: 15px;
+
+    font-weight: 500;
+
+}
+
+
+
+/* Падащо меню за размер */
+
+.size-select {
+
+    width: 100%;
+
+    padding: 10px 15px;
+
+    border: 1px solid #D3D3D3;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    color: #333333;
+
+    margin-bottom: 15px;
+
+    background-color: #FFFFFF;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    outline: none;
+
+}
+
+
+
+.size-select:hover {
+
+    border-color: #A9A9A9;
+
+}
+
+
+
+/* Бутони Добави */
+
+.add-btn {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+
+    margin-top: auto;
+
+}
+
+
+
+.btn-pink {
+
+    background-color: var(--btn-pink);
+
+}
+
+
+
+.btn-pink:hover {
+
+    background-color: var(--btn-pink-hover);
+
+}
+
+
+
+.btn-caramel {
+
+    background-color: var(--caramel-accent);
+
+}
+
+
+
+.btn-caramel:hover {
+
+    background-color: var(--btn-caramel-hover);
+
+}
+
+
+
+/* --- ФУТЪР --- */
+
+footer {
+
+    background-color: var(--card-white);
+
+    padding: 50px 20px;
+
+    margin-top: 60px;
+
+    /* Заобляме само горните ъгли, за да седи като "стъпил" на дъното */
+
+    border-top-left-radius: 50px;
+
+    border-top-right-radius: 50px;
+
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
+
+}
+
+
+
+.footer-content {
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px; /* Разстояние между отделните секции във футъра */
+
+}
+
+
+
+.footer-brand h2 {
+
+    color: var(--caramel-accent);
+
+    font-size: 38px;
+
+    margin-bottom: 5px;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.footer-brand p {
+
+    font-size: 18px;
+
+    color: #666;
+
+    font-style: italic;
+
+}
+
+
+
+.footer-socials p, .footer-contact p {
+
+    font-size: 18px;
+
+    color: var(--text-black);
+
+    margin: 8px 0;
+
+}
+
+
+
+.footer-socials strong {
+
+    color: var(--caramel-accent);
+
+}
