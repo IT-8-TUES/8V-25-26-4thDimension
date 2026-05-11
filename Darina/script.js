@@ -72,3 +72,71 @@ categoryButtons.forEach(button => {
     });
 
 });
+
+productCards.forEach(card => {
+
+    card.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        const description = card.getAttribute("data-description");
+
+        const imageSrc = card.querySelector("img").src;
+
+        const title = card.querySelector("h3").textContent;
+
+        if(description){
+
+            document.getElementById("modalImage").src = imageSrc;
+
+            document.getElementById("modalTitle").textContent = title;
+
+            document.getElementById("modalDescription").textContent = description;
+
+            document.getElementById("productModal").style.display = "flex";
+
+        }
+
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.querySelector(".close").addEventListener("click", () => {
+
+        document.getElementById("productModal").style.display = "none";
+
+    });
+
+    window.addEventListener("click", (event) => {
+
+        const modal = document.getElementById("productModal");
+
+        if (event.target === modal) {
+
+            modal.style.display = "none";
+
+        }
+
+    });
+
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+
+    document.getElementById("productModal").style.display = "none";
+
+});
+
+window.addEventListener("click", (event) => {
+
+    const modal = document.getElementById("productModal");
+
+    if (event.target === modal) {
+
+        modal.style.display = "none";
+
+    }
+
+});
