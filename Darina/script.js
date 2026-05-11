@@ -77,6 +77,10 @@ productCards.forEach(card => {
 
     card.addEventListener("click", (event) => {
 
+        if (event.target.closest("select") || event.target.closest("button")) {
+            return;
+        }
+
         event.stopPropagation();
 
         const description = card.getAttribute("data-description");
