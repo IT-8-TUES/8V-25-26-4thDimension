@@ -6,7 +6,13 @@ const cartCountEl = document.getElementById("cartCount");
 const buttons = document.querySelectorAll(".cart-btn");
 
 buttons.forEach(button => {
-    button.addEventListener("click", () => {
+        button.addEventListener("click", () => {
+        const select = button.closest(".product-card").querySelector("select");
+        if (select.value === "size") {
+            select.classList.add("error");
+            setTimeout(() => select.classList.remove("error"), 1500);
+            return;
+        }
         cartCount++;
         cartCountEl.textContent = cartCount;
 
@@ -182,3 +188,6 @@ if (modal) {
         if (e.key === "Escape") closeModal();
     });
 }
+
+
+

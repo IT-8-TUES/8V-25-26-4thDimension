@@ -539,7 +539,7 @@ transition: 0.3s;
     }
 }
 
-#sizes{
+.sizes{
     width: calc(100% - 30px);
     margin: 8px 15px;
     padding: 10px;
@@ -550,9 +550,14 @@ transition: 0.3s;
     background-color: white;
     }   
 
-#sizes:focus{
+.sizes:focus{
         outline: none;
         border-color: #b08968;
+    }
+    .sizes.error 
+    {
+        
+        border-color: red;
     }
 
     /*modal popup window*/
@@ -669,3 +674,4 @@ transition: 0.3s;
         border-radius: 12px 12px 0 0;
     }
 }
+
