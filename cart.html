@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modea - Количка и Плащане</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="stylecart.css">   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo-container">
+            <a href="#">
+                <img src="C:\Users\bella\Desktop\IT_proekt\8V-25-26-4thDimension\bella\logo.png" alt="MODEA Logo" class="logo-img">
+            </a>
+        </div>
+        <nav>
+            <a>обувки</a>
+            <a href="../Darina/tshirts.html">тениски</a>
+            <a href="../soraya/8V-25-26-4thDimension/soraq/bags-shoes.html">чанти</a>
+            <a href="../RayaK/jeans.html">дънки</a>
+            <a href="../RayaK/dresses.html">роkли</a>
+            <a href="../Darina/hoodies.html">худи</a>
+            <a href="cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a>
+        </nav>
+</header>
+
+<main class="cart-container">
+    <h2>Твоята количка</h2>
+    
+    <div id="cart-items-list"></div>
+
+    <div class="cart-footer" id="cart-summary">
+        <p>Обща сума: <span class="total-price" id="cart-total">0.00 €</span></p>
+        <button class="checkout-btn" id="show-checkout-btn">Завърши поръчката</button>
+    </div>
+
+    <div id="checkout-section" class="hidden">
+        <div class="checkout-box">
+            <h1></h1>
+            <form id="checkout-form">
+                <div class="input-group">
+                    <label>въведете трите си имена</label>
+                    <input type="text" id="first-name" placeholder="Име" required>
+                </div>
+                <div class="input-group">
+                    <label>въведете имейла си</label>
+                    <input type="email" id="email" placeholder="имейл" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>въведете телефонен номер</label>
+                    <input type="tel" id="phone"  placeholder="телефонен номер"required >
+                </div>
+                <div class="input-group">
+                    <label>въведете населено място</label>
+                    <input type="text" id="city"  placeholder="населено място"required >
+                </div>
+                
+                <div class="input-group">
+                    <label>въведете адрес</label>
+                    <input type="text" id="address" placeholder="адрес" required>
+                </div>
+                
+                <button type="submit" class="pay-btn">Button</button>
+            </form>
+        </div>
+    </div>
+
+    <a href="homepage.html" class="back-link">← Обратно към магазина</a>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
