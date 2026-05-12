@@ -5,35 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modea - Дънки</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👕</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <h1 class="logo">
-            <a href="index.html">
-                <img src="..\resources\logo.png" alt="Modea">
-            </a>
-        </h1>
-        <button class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="..\Darina\hoodies.html">Суичъри</a></li>
-            <li><a href="..\Darina\tshirts.html">Тениски</a></li>
-            <li><a href="jeans.html">Дънки</a></li>
-            <li><a href="dresses.html">Рокли</a></li>
-             <li><a href="..\soraya\8V-25-26-4thDimension\soraq\bags-shoes.html">Аксесоари</a></li>
-            <li><span class="cart-icon">🛒 <span id="cartCount">0</span></span></li>
-        </ul>
-    </nav>
-</header>
+<header id="header"></header>
 
 <section class="headingTxt">
     <div class="headingTxt-text">
@@ -234,19 +213,12 @@
 </div>
 
 
-<footer class="footer">
-    <div class="footer-content">
-        <h2><a href="..\index.html">Modea</a></h2>
-        <p>Минималистична мода за всеки</p>
-        <p class="footer-links"><a href="https:instagram.com">Instagram - Modea_official</a></p>
-        <p class="footer-links"><a href="https:tiktok.com">TikTok - Modea_style</a></p>
-        <p class="footer-links">Phone number - 088******9</p>
-        <p class="copyright">© 2026 Modea. Всички права запазени.</p>
-    </div>
-</footer>
+<footer class="footer" id="footer"></footer>
 
 <button id="scrollTop" class="scroll-top-btn">↑</button>
 
+<!--important templates.js to be before script.js-->
+<script src="..\templates.js"></script>
 <script src="script.js"></script>
 
 </body>
