@@ -1,34 +1,4 @@
 //made by Raya Krasimiriova Kirilova
-// Cart counter
-let cartCount = 0;
-const cartCountEl = document.getElementById("cartCount");
-
-const buttons = document.querySelectorAll(".cart-btn");
-
-buttons.forEach(button => {
-        button.addEventListener("click", () => {
-        const select = button.closest(".product-card").querySelector("select");
-        if (select.value === "size") {
-            select.classList.add("error");
-            setTimeout(() => select.classList.remove("error"), 1500);
-            return;
-        }
-        cartCount++;
-        cartCountEl.textContent = cartCount;
-
-        // bump animation
-        cartCountEl.classList.add("bump");
-        setTimeout(() => cartCountEl.classList.remove("bump"), 300);
-
-        // button feedback
-        button.textContent = "Добавено ✓";
-        button.disabled = true;
-        setTimeout(() => {
-            button.textContent = "Добави";
-            button.disabled = false;
-        }, 1500);
-    });
-});
 
 // Search
 const searchInput = document.getElementById("searchInput");

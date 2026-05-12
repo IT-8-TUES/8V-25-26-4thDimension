@@ -14,13 +14,13 @@ document.getElementById("header").innerHTML = `
         </button>
         <ul class="nav-links">
             <li><a href="../bella/index.html">Начало</a></li>
-            <li><a href="../Darina/hoodies.html">Суичъри</a></li>
+            <li><a href="../Darina/hoodies.html">Суитшърти</a></li>
             <li><a href="../Darina/tshirts.html">Тениски</a></li>
             <li><a href="../RayaK/jeans.html">Дънки</a></li>
-            <li><a href="../RayaK/dresses.html">Роkли</a></li>
+            <li><a href="../RayaK/dresses.html">Рокли</a></li>
             <li><a href="../soraya/8V-25-26-4thDimension/soraq/bags-shoes.html">Чанти и обувки</a></li>
             <li><a href="../soraya/8V-25-26-4thDimension/soraq/bags-shoes-gude.html">Модни съвети</a></li>
-            <li><span class="cart-icon">🛒 <span id="cartCount">0</span></span></li>
+            <li><a href="../bella/cart.html" class="cart-link">🛒 <span id="cart-count">0</span></a></li>
         </ul>
     </nav>
 `;
